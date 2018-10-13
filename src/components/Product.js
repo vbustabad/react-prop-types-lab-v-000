@@ -10,7 +10,7 @@ class Product extends React.Component {
           <li> {this.props.name} </li>
           <li> {this.props.producer} </li>
           <li> {this.props.hasWatermark ? true : false} </li>
-          <li>Ordered by {this.props.orderInfo.customerName} at {this.props.orderInfo.orderedAt}.</li>
+          <li> {this.props.color} </li>
         </ul>
       </div>
     );
@@ -26,10 +26,5 @@ Product.propTypes = {
   producer: PropTypes.string,
   hasWatermark: PropTypes.bool,
   color: PropTypes.string.isRequired,
-
-  scoops: PropTypes.arrayOf(PropTypes.string).isRequired,
-  orderInfo: PropTypes.shape({
-    customerName: PropTypes.string.isRequired,
-    orderedAt: PropTypes.number.isRequired // We're using UNIX timestamps here
-  }).isRequired
+  weight: PropTypes.number.isRequired
 };
