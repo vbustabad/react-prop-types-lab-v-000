@@ -11,6 +11,7 @@ class Product extends React.Component {
           <li> {this.props.producer} </li>
           <li> {this.props.hasWatermark ? true : false} </li>
           <li> {this.props.color} </li>
+          <li> {this.props.weight} </li>
         </ul>
       </div>
     );
